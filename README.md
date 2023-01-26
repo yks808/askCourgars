@@ -14,7 +14,9 @@ Things I learned: I think it is really important to commit and pull as often as 
 ## Design
 
 This fall, I will be a new freshman at BYU! But, there are lots that I don’t know and worry about. How can I study effectively? Which classes should I take in the first semester? Where can I go shopping for groceries? ..etc. 
+
 **“Ask Cougars”** provides connections between you and other students at BYU to ask any questions regarding school life so that you will be well prepared. You can also ask cougars where are the best places to go on dates or ideas for proposing to loved ones! Questions can be yours.
+
 
 ![Mock](cs260login.png)
 ![Mock](cs260maindraft.png)
