@@ -2,33 +2,33 @@
 
 **How to secure a webpage** 
 
-<h1>When you have a not secure from the location var:<h1>
+    When you have a not secure from the location var:
 
-request HTTPS -> Caddy -> Let's Encrypt -> secured!
+    request HTTPS -> Caddy -> Let's Encrypt -> secured!
 
-1. SSH to WSA from my terminal
+    1. SSH to WSA from my terminal
 
-2. Type below on your terminal 
-	cd ~
-	sudo vi Caddyfile
+    2. Type below on your terminal 
+	    cd ~
+	    sudo vi Caddyfile
 
-3. type ‘I” to edit and Change three parts 
-	:80 -> askcougars.click
-	startup.yourdomain -> startup.askcougars.click
-	simon.yourdomain -> simon.askcougars.click
+    3. type ‘I” to edit and Change three parts 
+	    :80 -> askcougars.click
+	    startup.yourdomain -> startup.askcougars.click
+	    simon.yourdomain -> simon.askcougars.click
 
-4. Type esc on your keyboard to finish editing, type :wq to save and quit
+    4. Type esc on your keyboard to finish editing, type :wq to save and quit
 
-5. Type below so that changes can effect
-	sudo service caddy restart
+    5. Type below so that changes can effect
+	    sudo service caddy restart
 
-6. Secured! Check your webpage’s location bar!
+    6. Secured! Check your webpage’s location bar!
 
 
-*The secure version of HTTP is called Secure Hypertext Transport Protocol (HTTPS)
+    *The secure version of HTTP is called Secure Hypertext Transport Protocol (HTTPS)
 
-Below would help to see the negotiations and make sure https://byu.edu has valid certificate.
-curl -v -s https://byu.edu > /dev/null
+    Below would help to see the negotiations and make sure https://byu.edu has valid certificate.
+    curl -v -s https://byu.edu > /dev/null
 
 # Ask Cougars
 
