@@ -2,7 +2,7 @@
 
 **How to secure a webpage** 
 
-When you have a not secure from the location var:
+<h1>When you have a not secure from the location var:<h1>
 
 request HTTPS -> Caddy -> Let's Encrypt -> secured!
 
@@ -25,7 +25,7 @@ request HTTPS -> Caddy -> Let's Encrypt -> secured!
 6. Secured! Check your webpage’s location bar!
 
 
-*HTTP is called Secure Hypertext Transport Protocol (HTTPS)
+*The secure version of HTTP is called Secure Hypertext Transport Protocol (HTTPS)
 
 Below would help to see the negotiations and make sure https://byu.edu has valid certificate.
 curl -v -s https://byu.edu > /dev/null
