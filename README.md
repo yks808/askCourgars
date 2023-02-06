@@ -1,13 +1,34 @@
 # startup
-Initial commit. 
 
-commit from visual studio for the assignment.
+**How to secure a webpage** 
 
-modifying from github.
+When you have a not secure from the location var:
 
-was able to see the change I made on github from vs now I am resolving merge conflict.
+request HTTPS -> Caddy -> Let's Encrypt -> secured!
 
-Things I learned: I think it is really important to commit and pull as often as possible to avoide merge conflicts, especially when more than one person is working on the same project.
+1. SSH to WSA from my terminal
+
+2. Type below on your terminal 
+	cd ~
+	sudo vi Caddyfile
+
+3. type ‘I” to edit and Change three parts 
+	:80 -> askcougars.click
+	startup.yourdomain -> startup.askcougars.click
+	simon.yourdomain -> simon.askcougars.click
+
+4. Type esc on your keyboard to finish editing, type :wq to save and quit
+
+5. Type below so that changes can effect
+	sudo service caddy restart
+
+6. Secured! Check your webpage’s location bar!
+
+
+*HTTP is called Secure Hypertext Transport Protocol (HTTPS)
+
+Below would help to see the negotiations and make sure https://byu.edu has valid certificate.
+curl -v -s https://byu.edu > /dev/null
 
 # Ask Cougars
 
