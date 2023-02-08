@@ -30,6 +30,14 @@
     Below would help to see the negotiations and make sure https://byu.edu has valid certificate.
     curl -v -s https://byu.edu > /dev/null
 
+**How to make deployFiles.sh script work** 
+    Type line below on your terminal so that it will 
+        1)deletes any previous deployment for simon, 
+        2)copies up all of the files found in the project directory,
+        3)makes sure Caddy is hosting the files under the simon subdomain of your domain (e.g. simon.yourdomain.click).
+
+    ./deployFiles.sh -k ~/keys/production.pem -h yourdomain.click -s simon
+
 # Ask Cougars
 
 ## Design
