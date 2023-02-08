@@ -31,7 +31,14 @@
     curl -v -s https://byu.edu > /dev/null
 
 
-**How to make deployFiles.sh script work** 
+**How to make deployFiles.sh script for own html website** 
+	
+	Type the line below from html repository
+
+	./deployWebsite.sh  -k ~/keys/production.pem -h funkychickens.click
+
+
+**How to make deployFiles.sh script for simon project work** 
 
     Type line below on your terminal so that it will 
 
