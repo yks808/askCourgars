@@ -32,15 +32,19 @@
 
 
 **How to make deployFiles.sh script for own html website** 
-	
-	Type the line below from html repository
 
+    Read deployFiles.sh to understand what is going to do.
+    
+	This case,scp (secure copy) to copy all files from the current directory to your server's public_html directory. The public_html directory is the 	  location where Caddy (your web server) looks for static pages to host.
+	
+	Type the line below from the working repository
+	
 	./deployWebsite.sh  -k ~/keys/production.pem -h funkychickens.click
 
 
 **How to make deployFiles.sh script for simon project work** 
 
-    Type line below on your terminal so that it will 
+    Read deployFiles.sh to understand what is going to do.
 
         1)deletes any previous deployment for simon, 
 
@@ -48,8 +52,10 @@
 
         3)makes sure Caddy is hosting the files under the simon subdomain of your domain
         (e.g. simon.yourdomain.click).
+	
+	Type the line below from the working repository
 
-    ./deployFiles.sh -k ~/keys/production.pem -h yourdomain.click -s simon
+    	./deployFiles.sh -k ~/keys/production.pem -h yourdomain.click -s simon
 
 # Ask Cougars
 
