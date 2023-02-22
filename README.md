@@ -58,10 +58,15 @@
     	./deployFiles.sh -k ~/keys/production.pem -h yourdomain.click -s simon
 	
 **Things I learned from simon-css assignmet**
+
 	1)Need to think about where to use class
+	
 	2)Need to think about how much html can handle and let css handle the rest
+	
 	3)Need to think about how to make stuff appear by using css ex) circle.
+	
 	4)Need to remember to add <link rel="stylesheet" href="main.css" /> to make main.css to effect on things.
+	
 	5)If I want to add bootstrap, need to add line below before </head> part.
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
