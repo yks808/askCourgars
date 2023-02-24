@@ -87,6 +87,8 @@
 
     4)You can make a lot of different types of things by using cards
 
+    5)need to have index.html as main page to meke it public 
+
 
 
 
