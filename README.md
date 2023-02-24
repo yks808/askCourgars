@@ -70,7 +70,26 @@
 	5)If I want to add bootstrap, need to add line below before </head> part.
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-	
+
+**Things I learned from startup project HTML & CSS imprementation**
+
+    1)if I want to make the something appear in the middle of screen, the code below works great.
+            <section class="vh-100">
+                <div class="container h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                    </div>
+                </div>
+            </section>
+    
+    2)bootsicon is available and great use.
+
+    3)If I want the dropdown nav to work when you make the screen work, you need to add some javalink on the bottom of the HTML(before /html)
+
+    4)You can make a lot of different types of things by using cards
+
+
+
+
 # Ask Cougars
 
 ## Design
