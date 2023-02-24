@@ -2,10 +2,6 @@ footer a {
     float: right;
 }
 
-.signup-main {
-    background-color: #eee;
-}
-
-.login-main {
+main {
     background-color: #eee;
 }
