@@ -89,8 +89,16 @@
 
     5)need to have index.html as main page to meke it public 
 
+**Things I learned from simon-css assignmet**
 
-
+    1)use DOM to imprement JS
+    
+    2)querySelectorAll to add some find specific elements so that you can add functions to it
+    
+    3)build constructor
+    
+    4)await has to be under async
+    
 
 # Ask Cougars
 
