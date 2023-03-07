@@ -89,7 +89,7 @@
 
     5)need to have index.html as main page to meke it public 
 
-**Things I learned from simon-css assignmet**
+**Things I learned from simon-java assignmet**
 
     1)use DOM to imprement JS
     
