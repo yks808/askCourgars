@@ -3,12 +3,11 @@ class Ask {
 
     constructor() {
         const titleNameEl = document.querySelector('.title-name');
-        titleNameEl.textContent = this.getTitlePost();
+        titleNameEl.textContent = this.getTitleName();
     }
-    getTitlePost() {
-        return localStorage.getItem('titlePost') ?? 'Title:';
+    getTitleName() {
+        return localStorage.getItem('questionTitle') ?? 'Please post your questions';
     }
-
 
 }
 
