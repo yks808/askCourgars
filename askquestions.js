@@ -9,7 +9,6 @@ class Game {
         return localStorage.getItem('userName') ?? 'Please log in';
     }
 
-
 }
 
 const game = new Game();

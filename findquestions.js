@@ -2,11 +2,15 @@
 class Ask {
 
     constructor() {
+
         const postTitleEl = document.querySelector('.post-title');
         postTitleEl.textContent = this.getQuestionTitle();
+
         const postMainEl = document.querySelector('.post-main');
         postMainEl.textContent = this.getQuestionMain();
     }
+
+
     getQuestionTitle() {
         return localStorage.getItem('questionTitle') ?? 'No post(title) has made yet';
     }
