@@ -122,6 +122,8 @@
 
 }
 
+    4)need to figure out how to store it as array and print it out, how to make card generates whenever input is posted
+
 const name = new Name();
 
 # Ask Cougars
