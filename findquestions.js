@@ -14,6 +14,11 @@ class Ask {
 
         const dateEl = document.querySelector('.post-date');
         dateEl.textContent = this.getDate();
+
+        let info = [];
+        info = { name: postNameEl, date: dateEl, title: postTitleEl, main: postMainEl };
+        localStorage.setItem('userInfo', JSON.stringify(info));
+
     }
 
     getQuestionTitle() {
