@@ -11,6 +11,8 @@ class Ask {
 
         const postNameEl = document.querySelector('.post-name');
         postNameEl.textContent = this.getPostName();
+
+
     }
 
 
@@ -25,6 +27,7 @@ class Ask {
     getPostName() {
         return localStorage.getItem('userName') ?? 'No post(name) has made yet';
     }
+
 }
 
 const ask = new Ask();
