@@ -12,9 +12,8 @@ class Ask {
         const postNameEl = document.querySelector('.post-name');
         postNameEl.textContent = this.getPostName();
 
-        let scores = [];
-        const scoresText = localStorage.getItem('scores');
-
+        const dateEl = document.querySelector('.post-date');
+        dateEl.textContent = this.getDate();
     }
 
     getQuestionTitle() {
@@ -29,8 +28,9 @@ class Ask {
         return localStorage.getItem('userName') ?? 'No post(name) has made yet';
     }
 
-
-
+    getDate() {
+        return new Date().toLocaleDateString();
+    }
 }
 
 const ask = new Ask();
