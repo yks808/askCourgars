@@ -15,9 +15,17 @@ class Ask {
         const dateEl = document.querySelector('.post-date');
         dateEl.textContent = this.getDate();
 
-        let info = [];
-        info = { name: postNameEl, date: dateEl, title: postTitleEl, main: postMainEl };
+        let infoToIn = [];
+        infoToIn = { name: postNameEl, date: dateEl, title: postTitleEl, main: postMainEl };
         localStorage.setItem('userInfo', JSON.stringify(info));
+        //add all the input from a user as an array in localstorage
+
+        let infoToOut = [];
+        const infoToOutText = localStorage.getItem('userInfo');
+        if (infoToOutText) {
+            infoToOut = JSON.parse(infoToOutText);
+        }
+        //need to work on it later of the project to maek it work
 
     }
 
