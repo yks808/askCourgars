@@ -6,12 +6,16 @@ body {
     background: #eee
 }
 
-.date {
+.dates {
     font-size: 11px
 }
 
-.name {
+.names {
     color: #007bff
+}
+
+.titles {
+    font-size: 26px
 }
 
 .cursor:hover {
