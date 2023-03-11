@@ -99,6 +99,30 @@
     
     4)await has to be under async
     
+**Things I learned from startup project javaScript imprementation**
+
+    1)add script in the end if you try to get input
+    
+    2)use id to get info from input box, and store it in local storage/name it something different
+    
+    3)when you try to get that local storage, make function to return it and = to textContent. 
+    querySelector makes it available to print it off as you use player-name on html.
+    example below;
+    
+    class Name {
+
+    constructor() {
+        const playerNameEl = document.querySelector('.player-name');
+        playerNameEl.textContent = this.getPlayerName();
+    }
+
+    getPlayerName() {
+        return localStorage.getItem('userName') ?? 'Please log in';
+    }
+
+}
+
+const name = new Name();
 
 # Ask Cougars
 
