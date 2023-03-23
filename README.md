@@ -126,6 +126,16 @@
 
 const name = new Name();
 
+**Things I learned from simon service project imprementation**
+
+     1)Put all html, css, js, Assets, icon files in the folder called public
+     2)npm init - y in directory
+     3)npm install express in directory
+     4)reate index.js file as the root of the project
+     5)node index.js in directrory and now you can view from localhost:3000 (4000 for startup)
+     6)now this makes it not able to use live server from vs code, but you can use your terminal and localhost.
+     7)get is used to get something, post is used when we want to update something
+
 # Ask Cougars
 
 ## Design
