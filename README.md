@@ -135,6 +135,23 @@ const name = new Name();
      5)node index.js in directrory and now you can view from localhost:3000 (4000 for startup)
      6)now this makes it not able to use live server from vs code, but you can use your terminal and localhost.
      7)get is used to get something, post is used when we want to update something
+     
+**Things I learned from simon-db assignment**
+
+     1)set up mongoDB atlas
+     2)add environment below so that we don’t have to hard code all the credential info and get variable
+     *change stuff after =
+     *host name is after@ from connection string 
+
+     const userName = process.env.MONGOUSER;
+     const password = process.env.MONGOPASSWORD;
+     const hostname = process.env.MONGOHOSTNAME;
+
+     3)when you are able to get the above done, the below should be able to connect to the mongo database. Test to see by console.log(userName);
+
+     const url = `mongodb+srv://${userName}:${password}@${hostname}`;
+
+     4)npm install mongodb to get mongo install
 
 # Ask Cougars
 
