@@ -2,7 +2,7 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
-const DB = require('.database.js');
+const DB = require('./database.js');
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
