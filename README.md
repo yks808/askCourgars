@@ -131,7 +131,7 @@ const name = new Name();
      1)Put all html, css, js, Assets, icon files in the folder called public
      2)npm init - y in directory
      3)npm install express in directory
-     4)reate index.js file as the root of the project
+     4)create index.js file as the root of the project
      5)node index.js in directrory and now you can view from localhost:3000 (4000 for startup)
      6)now this makes it not able to use live server from vs code, but you can use your terminal and localhost.
      7)get is used to get something, post is used when we want to update something
@@ -152,6 +152,13 @@ const name = new Name();
      const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
      4)npm install mongodb to get mongo install
+     
+**Things I learned from Simon-login**
+     1)npm init -y
+     2)npm install express cookie-parser mongodb uuid bcrypt to get all the stuff we need to run for Simon 
+     3)uuid is used to create random id
+     4)bcrypt is used so that we don’t have to store password, but instead cryptographically hash the password for securing purpose.
+     5)401 is unauthorized code
 
 # Ask Cougars
 
