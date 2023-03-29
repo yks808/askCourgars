@@ -2,8 +2,6 @@ function displayQuote(data) {
     fetch('https://api.quotable.io/random')
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
-
             const containerEl = document.querySelector('#quote');
 
             const quoteEl = document.createElement('p');
@@ -18,5 +16,4 @@ function displayQuote(data) {
             containerEl.appendChild(authorEl);
         });
 }
-
 displayQuote();
