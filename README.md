@@ -159,6 +159,16 @@ const name = new Name();
      3)uuid is used to create random id
      4)bcrypt is used so that we don’t have to store password, but instead cryptographically hash the password for securing purpose.
      5)401 is unauthorized code
+     
+**Things I learned from SImon-websocket**
+     1)npm init -y
+     2)npm install ws
+     3)This project allows to see user who are playing Simon at the time and what scores they get in real time
+     4)add this line at the begging 
+	const { WebSocketServer } = require('ws'); to get ws 
+     5)And to create own ws object
+	const wss = new WebSocketServer({ noServer: true });
+     6)ping and pong are something to keep connection alive
 
 # Ask Cougars
 
