@@ -19,25 +19,6 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Ask Cougars</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="askquestions.html">Ask Questions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="findquestions.html">Find questions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                </div>
             </div>
         </nav>
     </header>
@@ -50,11 +31,11 @@
                         <div class="card text-black shadow p-3 mb-5 bg-white rounded">
                             <div class="card-body p-md-5">
                                 <div class="row justify-content-center">
+                                    <p class="text-center h1 fw-bold mb-5 mt-4">Log in</p>
 
-                                    <div>
-                                        <p class="text-center h1 fw-bold mb-5 mt-4">Log in</p>
 
-                                        <div id="loginControls" style="display: none">
+                                    <div id="loginControls" style="display: none">
+                                        <form class="mx-md-4">
                                             <div class="d-flex align-items-center mb-4">
                                                 <i class="me-3"></i>
                                                 <div class="flex-fill">
@@ -70,46 +51,49 @@
                                                         placeholder="Password:" />
                                                 </div>
                                             </div>
-
                                             <div class="d-flex justify-content-center">
                                                 <button type="button" class="btn btn-outline-primary btn-lg"
                                                     onclick="loginUser()">
                                                     Login
                                                 </button>
                                             </div>
-
                                             <hr class="my-4">
                                             <div class="d-flex justify-content-center">
                                                 <button type="button" class="btn btn-outline-primary btn-lg"
-                                                    onclick="createUser()">
+                                                    onclick="signup()">
                                                     Create New Account
                                                 </button>
                                             </div>
-                                        </div>
-
-                                        <!-- Displayed when ready to play -->
-                                        <div id="playControls" style="display: none">
-                                            <div id="playerName"></div>
-                                            <button type="button" class="btn btn-primary" onclick="play()">
-                                                Ask cougars
-                                            </button>
-                                            <button type="button" class="btn btn-secondary" onclick="logout()">
-                                                Logout
-                                            </button>
-                                        </div>
+                                        </form>
                                     </div>
 
-
-                                    <div class="modal fade" id="msgModal" tabindex="-1">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content text-dark">
-                                                <div class="modal-body">error message here</div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">
-                                                        Close
+                                    <!-- Displayed when ready to play -->
+                                    <div id="playControls" style="display: none">
+                                        <div class="container-fluid text-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div>
+                                                    <div id="playerName"></div>
+                                                    <button type="button" class="btn btn-primary" onclick="login()">
+                                                        Ask Questions
+                                                    </button>
+                                                    <button type="button" class="btn btn-secondary" onclick="logout()">
+                                                        Logout
                                                     </button>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Error dialog -->
+                                <div class="modal fade" id="msgModal" tabindex="-1">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content text-dark">
+                                            <div class="modal-body">error message here</div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Close
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -128,7 +112,8 @@
             <a class="text-reset" href="https://github.com/oYUKINAo/startup">GitHub</a>
         </div>
     </footer>
-
+    <script src="login.js"></script>
+    <script src="signup.js"></script>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

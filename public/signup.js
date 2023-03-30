@@ -1,3 +1,3 @@
 function signup() {
-    window.location.href = "askquestions.html";
+    window.location.href = "signup.html";
 }

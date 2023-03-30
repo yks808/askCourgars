@@ -49,8 +49,8 @@ async function loginOrCreate(endpoint) {
     }
 }
 
-function play() {
-    window.location.href = 'play.html';
+function login() {
+    window.location.href = "askquestions.html";
 }
 
 function logout() {
