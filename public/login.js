@@ -43,7 +43,7 @@ async function loginOrCreate(endpoint) {
         window.location.href = 'askquestions.html';
     } else {
         const modalEl = document.querySelector('#msgModal');
-        modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
+        modalEl.querySelector('.modal-body').textContent = `Error: ${body.msg}`;
         const msgModal = new bootstrap.Modal(modalEl, {});
         msgModal.show();
     }

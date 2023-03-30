@@ -50,44 +50,69 @@
                         <div class="card text-black shadow p-3 mb-5 bg-white rounded">
                             <div class="card-body p-md-5">
                                 <div class="row justify-content-center">
-                                    <p class="text-center h1 fw-bold mb-5 mt-4">Log in</p>
-                                    <!-- <form class="mx-md-4"> --> <!--to collet user input-->
 
-                                    <div class="d-flex align-items-center mb-4">
-                                        <i class="me-3"></i>
-                                        <div class="flex-fill">
-                                            <input type="email" id="login-email" class="form-control"
-                                                placeholder="Email address:">
-                                        </div>
-                                    </div>
+                                    <div>
+                                        <p class="text-center h1 fw-bold mb-5 mt-4">Log in</p>
 
-                                    <div class="d-flex align-items-center mb-4">
-                                        <i class="me-3"></i>
-                                        <div class="flex-fill">
-                                            <input type="password" id="login-email" class="form-control"
-                                                placeholder="Password:">
-                                        </div>
-                                    </div>
-                                    <!-- <div class="d-flex align-items-center mb-4">
-                                            <i class="me-3"></i>
-                                            <div class="flex-fill">
-                                                <input type="password" id="signup-password" class="form-control"
-                                                    placeholder="Password:">
-                                                <a class="breadcrumb-item d-flex align-items-center"><a href="#">Forgot
-                                                        password?</a>
+                                        <div id="loginControls" style="display: none">
+                                            <div class="d-flex align-items-center mb-4">
+                                                <i class="me-3"></i>
+                                                <div class="flex-fill">
+                                                    <input class="form-control" type="text" id="userName"
+                                                        placeholder="Username:" />
+                                                </div>
                                             </div>
-                                        </div> -->
-                                    <div class="d-flex justify-content-center">
-                                        <!-- <button type="button" class="btn btn-primary btn-block mb-4">Log
-                                                in</button> -->
-                                        <button class="btn btn-primary" onclick="login()">Login</button>
+
+                                            <div class="d-flex align-items-center mb-4">
+                                                <i class="me-3"></i>
+                                                <div class="flex-fill">
+                                                    <input class="form-control" type="password" id="userPassword"
+                                                        placeholder="Password:" />
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary btn-lg"
+                                                    onclick="loginUser()">
+                                                    Login
+                                                </button>
+                                            </div>
+
+                                            <hr class="my-4">
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button" class="btn btn-outline-primary btn-lg"
+                                                    onclick="createUser()">
+                                                    Create New Account
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Displayed when ready to play -->
+                                        <div id="playControls" style="display: none">
+                                            <div id="playerName"></div>
+                                            <button type="button" class="btn btn-primary" onclick="play()">
+                                                Ask cougars
+                                            </button>
+                                            <button type="button" class="btn btn-secondary" onclick="logout()">
+                                                Logout
+                                            </button>
+                                        </div>
                                     </div>
-                                    <hr class="my-4">
-                                    <div class="d-flex justify-content-center">
-                                        <button type="button" class="btn btn-outline-primary btn-lg">Create New
-                                            Account</button>
+
+
+                                    <div class="modal fade" id="msgModal" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content text-dark">
+                                                <div class="modal-body">error message here</div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <!-- </form> -->
                                 </div>
                             </div>
                         </div>
