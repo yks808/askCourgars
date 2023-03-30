@@ -13,7 +13,8 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-const userCollection = client.db('askcougars').collection('user');
+const userCollection = client.db('simon').collection('user');
+const scoreCollection = client.db('simon').collection('score');
 
 function getUser(email) {
     return userCollection.findOne({ email: email });
@@ -24,6 +25,7 @@ function getUserByToken(token) {
 }
 
 async function createUser(email, password) {
+    // Hash the password before we insert it into the database
     const passwordHash = await bcrypt.hash(password, 10);
 
     const user = {
