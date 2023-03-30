@@ -6,7 +6,7 @@ const DB = require('./database.js');
 
 const authCookieName = 'token';
 
-// The service port. In production the application is statically hosted by the service on the same port.
+// The service port may be set on the command line
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
 // JSON body parsing using built-in middleware
@@ -15,16 +15,27 @@ app.use(express.json());
 // Use the cookie parser middleware for tracking authentication tokens
 app.use(cookieParser());
 
-// Serve up the application's static content
+// Serve up the applications static content
 app.use(express.static('public'));
 
 // Router for service endpoints
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-// Return the application's default page if the path is unknown
-app.use((_req, res) => {
-    res.sendFile('index.html', { root: 'public' });
+// CreateAuth token for a new user
+apiRouter.post('/auth/create', async (req, res) => {
+    if (await DB.getUser(req.body.email)) {
+        res.status(409).send({ msg: 'Existing user' });
+    } else {
+        const user = await DB.createUser(req.body.email, req.body.password);
+
+        // Set the cookie
+        setAuthCookie(res, user.token);
+
+        res.send({
+            id: user._id,
+        });
+    }
 });
 
 // GetAuth token for the provided credentials
