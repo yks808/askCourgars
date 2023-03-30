@@ -46,40 +46,74 @@
                             <!--put regular amount of shadow-->
 
                             <div class="card-body p-md-5">
+
                                 <div class="row justify-content-center"> <!--you need both to make things in a center-->
                                     <p class="text-center h1 fw-bold mb-5 mt-4">Sign Up</p>
                                     <!--mb-5 is space under sign up and mt-4 is space above-->
 
-                                    <form class="mx-md-4"> <!---- changes the length of box-->
 
-                                        <div class="d-flex align-items-center mb-4">
-                                            <!--d-flex makes input box shorter a bit in the front, mb-4 makesspace between box-->
-                                            <i class="me-3"></i><!--makes input box short a bit in the front-->
-                                            <div class="flex-fill"><!--makes input box long-->
-                                                <input class="form-control" type="text" id="userName"
-                                                    placeholder="Username:" />
-                                                <!--placeholder is text shown in a box-->
-                                            </div>
-                                        </div>
+                                    <div id="loginControls" style="display: none">
+                                        <form class="mx-md-4"> <!---- changes the length of box-->
 
-                                        <div class="d-flex align-items-center mb-4">
-                                            <i class="me-3"></i>
-                                            <div class="flex-fill">
-                                                <input class="form-control" type="password" id="userPassword"
-                                                    placeholder="Password:" />
+                                            <div class="d-flex align-items-center mb-4">
+                                                <!--d-flex makes input box shorter a bit in the front, mb-4 makesspace between box-->
+                                                <i class="me-3"></i><!--makes input box short a bit in the front-->
+                                                <div class="flex-fill"><!--makes input box long-->
+                                                    <input class="form-control" type="text" id="userName"
+                                                        placeholder="Username:" />
+                                                    <!--placeholder is text shown in a box-->
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="d-flex justify-content-center">
-                                            <button type="button" class="btn btn-primary btn-lg" onclick="createUser()">
-                                                Sign Up
-                                            </button>
-                                        </div>
-                                    </form>
+
+                                            <div class="d-flex align-items-center mb-4">
+                                                <i class="me-3"></i>
+                                                <div class="flex-fill">
+                                                    <input class="form-control" type="password" id="userPassword"
+                                                        placeholder="Password:" />
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <button type="button" class="btn btn-primary btn-lg"
+                                                    onclick="createUser()">
+                                                    Sign Up
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <!-- Displayed when ready to play -->
+                                    <div id="playControls" style="display: none">
+                                        <div id="playerName"></div>
+                                        <button type="button" class="btn btn-primary" onclick="signup()">
+                                            Ask Questions
+                                        </button>
+                                        <button type="button" class="btn btn-secondary" onclick="logout()">
+                                            Logout
+                                        </button>
+
+                                    </div>
                                 </div>
+
+                                <!-- Error dialog -->
+                                <div class="modal fade" id="msgModal" tabindex="-1">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content text-dark">
+                                            <div class="modal-body">error message here</div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     </main>
@@ -91,6 +125,7 @@
         </div>
     </footer>
     <script src="login.js"></script>
+    <script src="signup.js"></script>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
