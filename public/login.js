@@ -1,9 +1,3 @@
-function login() {
-    const nameEl = document.querySelector("#name");
-    localStorage.setItem("userName", nameEl.value);
-    window.location.href = "askquestions.html";
-}
-
 (async () => {
     let authenticated = false;
     const userName = localStorage.getItem('userName');
@@ -37,7 +31,7 @@ async function loginOrCreate(endpoint) {
     const password = document.querySelector('#userPassword')?.value;
     const response = await fetch(endpoint, {
         method: 'post',
-        body: JSON.stringify({ username: userName, password: password }),
+        body: JSON.stringify({ email: userName, password: password }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
@@ -56,7 +50,7 @@ async function loginOrCreate(endpoint) {
 }
 
 function play() {
-    window.location.href = 'askquestions.html';
+    window.location.href = 'play.html';
 }
 
 function logout() {
