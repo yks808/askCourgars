@@ -27,7 +27,7 @@ async function createUser(email, password) {
     const passwordHash = await bcrypt.hash(password, 10);
 
     const user = {
-        email: email,
+        username: email,
         password: passwordHash,
         token: uuid.v4(),
     };
