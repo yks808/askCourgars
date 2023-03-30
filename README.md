@@ -126,6 +126,50 @@
 
 const name = new Name();
 
+**Things I learned from simon service project imprementation**
+
+     1)Put all html, css, js, Assets, icon files in the folder called public
+     2)npm init - y in directory
+     3)npm install express in directory
+     4)create index.js file as the root of the project
+     5)node index.js in directrory and now you can view from localhost:3000 (4000 for startup)
+     6)now this makes it not able to use live server from vs code, but you can use your terminal and localhost.
+     7)get is used to get something, post is used when we want to update something
+     
+**Things I learned from simon-db assignment**
+
+     1)set up mongoDB atlas
+     2)add environment below so that we don’t have to hard code all the credential info and get variable
+     *change stuff after =
+     *host name is after@ from connection string 
+
+     const userName = process.env.MONGOUSER;
+     const password = process.env.MONGOPASSWORD;
+     const hostname = process.env.MONGOHOSTNAME;
+
+     3)when you are able to get the above done, the below should be able to connect to the mongo database. Test to see by console.log(userName);
+
+     const url = `mongodb+srv://${userName}:${password}@${hostname}`;
+
+     4)npm install mongodb to get mongo install
+     
+**Things I learned from Simon-login**
+     1)npm init -y
+     2)npm install express cookie-parser mongodb uuid bcrypt to get all the stuff we need to run for Simon 
+     3)uuid is used to create random id
+     4)bcrypt is used so that we don’t have to store password, but instead cryptographically hash the password for securing purpose.
+     5)401 is unauthorized code
+     
+**Things I learned from SImon-websocket**
+     1)npm init -y
+     2)npm install ws
+     3)This project allows to see user who are playing Simon at the time and what scores they get in real time
+     4)add this line at the begging 
+	const { WebSocketServer } = require('ws'); to get ws 
+     5)And to create own ws object
+	const wss = new WebSocketServer({ noServer: true });
+     6)ping and pong are something to keep connection alive
+
 # Ask Cougars
 
 ## Design
