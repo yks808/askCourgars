@@ -14,6 +14,7 @@ const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
 const userCollection = client.db('askcougars').collection('user');
+const questionCollection = client.db('askcougars').collection('userquestion');
 
 function getUser(username) {
     return userCollection.findOne({ username: username });
@@ -36,8 +37,22 @@ async function createUser(username, password) {
     return user;
 }
 
+async function addQuestion(username, title, question, date) {
+
+    const userquestion = {
+        username: username,
+        title: title,
+        question: question,
+        date: date,
+    };
+    await questionCollection.insertOne(userquestion);
+
+    return userquestion;
+}
+
 module.exports = {
     getUser,
     getUserByToken,
     createUser,
+    addQuestion,
 };

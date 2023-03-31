@@ -1,3 +1,32 @@
+function post() {
+
+    const titleEl = document.querySelector("#title");
+    localStorage.setItem("questionTitle", titleEl.value);
+
+    const mainEl = document.querySelector("#form-comment");
+    localStorage.setItem("questionMain", mainEl.value);
+
+
+    //get all the date that want to get stored
+    const userName = localStorage.getItem('userName');
+    const title = document.querySelector('#title')?.value;
+    const userQuestion = document.querySelector('#form-comment')?.value;
+    const date = new Date().toLocaleDateString();
+
+    // try {
+    //     const response = fetch('/api/createq', {
+    //         method: 'POST',
+    //         body: JSON.stringify({ name: userName, title: title, userQuestion: userQuestion, date: date }),
+    //         headers: { 'content-type': 'application/json' },
+    //     });
+    //     const body = response.json();
+    // } catch {
+    //     console.log("saving new info was failed")
+    // }
+
+
+    window.location.href = "findquestions.html";
+}
 
 class Name {
 
@@ -9,44 +38,6 @@ class Name {
     getPlayerName() {
         return localStorage.getItem('userName') ?? 'Please log in';
     }
-
-    async pressButton(button) {
-
-        saveScore(this.sequence.length - 1);
-
-    }
-
-    saveScore(score) {
-        const userName = this.getPlayerName();
-        let scores = [];
-        const scoresText = localStorage.getItem('scores');
-        if (scoresText) {
-            scores = JSON.parse(scoresText);
-        }
-        scores = this.updateScores(userName, score, scores);
-
-        localStorage.setItem('scores', JSON.stringify(scores));
-    }
-
-    updateScores(userName, score, scores) {
-        const date = new Date().toLocaleDateString();
-        const newScore = { name: userName, score: score, date: date };
-        scores.push(newScore);
-        return scores;
-    }
-
-
 }
 
 const name = new Name();
-
-function post() {
-
-    const titleEl = document.querySelector("#title");
-    localStorage.setItem("questionTitle", titleEl.value);
-
-    const mainEl = document.querySelector("#form-comment");
-    localStorage.setItem("questionMain", mainEl.value);
-
-    window.location.href = "findquestions.html";
-}
