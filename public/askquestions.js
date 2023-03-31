@@ -1,5 +1,6 @@
-function post() {
+async function post() {
 
+    console.log("post method called");
     const titleEl = document.querySelector("#title");
     localStorage.setItem("questionTitle", titleEl.value);
 
@@ -12,17 +13,18 @@ function post() {
     const title = document.querySelector('#title')?.value;
     const userQuestion = document.querySelector('#form-comment')?.value;
     const date = new Date().toLocaleDateString();
+    debugger
 
-    try {
-        const response = fetch('api/question/create', {
-            method: 'POST',
-            body: JSON.stringify({ name: userName, title: title, userQuestion: userQuestion, date: date }),
-            headers: { 'content-type': 'application/json charset=UTF-8' },
-        });
+    const body = ({ userName: userName, title: title, userQuestion: userQuestion, date: date });
 
-    } catch {
-        console.log("failed")
-    }
+    const response = await fetch('api/question/create', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(body),
+    });
+    // const json = await response.json();
+    // console.log(json);
+
     window.location.href = "findquestions.html";
 }
 
