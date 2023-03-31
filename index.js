@@ -22,8 +22,13 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+
 apiRouter.post('/question/create', async (req, res) => {
-    DB.addQuestion(req.body.username, req.body.title, req.body.question, req.body.date);
+    console.log("apiRouter.post called");
+    console.log(res.status);
+    console.log(req);
+    console.log(req.body);
+    DB.addQuestion(req.body.userName, req.body.title, req.body.userQuestion, req.body.date);
 });
 
 // CreateAuth token for a new user
