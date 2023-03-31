@@ -13,18 +13,16 @@ function post() {
     const userQuestion = document.querySelector('#form-comment')?.value;
     const date = new Date().toLocaleDateString();
 
-    // try {
-    //     const response = fetch('/api/createq', {
-    //         method: 'POST',
-    //         body: JSON.stringify({ name: userName, title: title, userQuestion: userQuestion, date: date }),
-    //         headers: { 'content-type': 'application/json' },
-    //     });
-    //     const body = response.json();
-    // } catch {
-    //     console.log("saving new info was failed")
-    // }
+    try {
+        const response = fetch('api/question/create', {
+            method: 'POST',
+            body: JSON.stringify({ name: userName, title: title, userQuestion: userQuestion, date: date }),
+            headers: { 'content-type': 'application/json charset=UTF-8' },
+        });
 
-
+    } catch {
+        console.log("failed")
+    }
     window.location.href = "findquestions.html";
 }
 
