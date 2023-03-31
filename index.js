@@ -24,10 +24,10 @@ app.use(`/api`, apiRouter);
 
 
 apiRouter.post('/question/create', async (req, res) => {
-    console.log("apiRouter.post called");
-    console.log(res.status);
-    console.log(req);
-    console.log(req.body);
+    // console.log("apiRouter.post called");
+    // console.log(res.status);
+    // console.log(req);
+    // console.log(req.body);
     DB.addQuestion(req.body.userName, req.body.title, req.body.userQuestion, req.body.date);
 });
 

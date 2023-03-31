@@ -13,10 +13,16 @@ async function post() {
     const title = document.querySelector('#title')?.value;
     const userQuestion = document.querySelector('#form-comment')?.value;
     const date = new Date().toLocaleDateString();
-    debugger
+    window.location.href = "findquestions.html";
+
+    // const response = await fetch('api/question/create');
+    // console.log(response.ok);
+    // console.log(response.status);
+    // const questions = await response.json();
+    // return questions;
 
     const body = ({ userName: userName, title: title, userQuestion: userQuestion, date: date });
-
+    console.log(body);
     const response = await fetch('api/question/create', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
@@ -24,8 +30,6 @@ async function post() {
     });
     // const json = await response.json();
     // console.log(json);
-
-    window.location.href = "findquestions.html";
 }
 
 class Name {

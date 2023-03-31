@@ -38,7 +38,6 @@ async function createUser(username, password) {
 }
 
 async function addQuestion(username, title, question, date) {
-
     const userQuestion = {
         username: username,
         title: title,
