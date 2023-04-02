@@ -31,6 +31,14 @@ apiRouter.post('/question/create', async (req, res) => {
     DB.addQuestion(req.body.userName, req.body.title, req.body.userQuestion, req.body.date);
 });
 
+apiRouter.get('/post', async (req, res) => {
+    const questions = await DB.getQuestion();
+    console.log("post body", questions);
+
+    res.send(questions);
+});
+
+
 // CreateAuth token for a new user
 apiRouter.post('/auth/create', async (req, res) => {
     if (await DB.getUser(req.body.username)) {

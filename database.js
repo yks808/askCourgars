@@ -47,9 +47,17 @@ async function addQuestion(username, title, question, date) {
     await questionCollection.insertOne(userQuestion);
 }
 
+async function getQuestion() {
+    const cursor = questionCollection.find();
+    const info = await cursor.toArray();
+    console.log("db return", info);
+    return info;
+}
+
 module.exports = {
     getUser,
     getUserByToken,
     createUser,
     addQuestion,
+    getQuestion,
 };

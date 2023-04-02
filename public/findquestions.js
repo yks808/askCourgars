@@ -1,4 +1,49 @@
 
+async function loadQuestions() {
+    console.log("loadquestion is called");
+
+    let questions = [];
+    const response = await fetch('api/post');
+    console.log("coming back as", response);
+    questions = await response.json();
+
+    console.log("final", questions);
+
+    displayQuestions(questions);
+}
+
+function displayQuestions(questions) {
+    const tableBodyEl = document.querySelector('#questionsTable');
+
+    if (questions.length) {
+
+        for (const [oneQ] of questions.entries()) {
+            const nameTdEl = document.createElement('td');
+            const dateTdEl = document.createElement('td');
+            const titleTdEl = document.createElement('td');
+            const scoreTdEl = document.createElement('td');
+
+
+            nameTdEl.textContent = oneQ.username;
+            dateTdEl.textContent = oneQ.date;
+            titleTdEl.textContent = oneQ.title;
+            scoreTdEl.textContent = oneQ.question;
+
+            const rowEl = document.createElement('tr');
+            rowEl.appendChild(nameTdEl);
+            rowEl.appendChild(dateTdEl);
+            rowEl.appendChild(titleTdEl);
+            rowEl.appendChild(scoreTdEl);
+
+            tableBodyEl.appendChild(rowEl);
+        }
+    } else {
+        tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
+    }
+}
+
+loadQuestions();
+
 class Ask {
 
     constructor() {
@@ -44,6 +89,7 @@ class Ask {
     getDate() {
         return new Date().toLocaleDateString();
     }
+
 }
 
 const ask = new Ask();
