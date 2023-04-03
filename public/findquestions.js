@@ -13,32 +13,32 @@ async function loadQuestions() {
 }
 
 function displayQuestions(questions) {
-    const tableBodyEl = document.querySelector('#questionsTable');
-
-    if (questions.length) {
-        // Update the DOM with the scores
-        for (const [i, post] of questions.entries()) {
-            const usernameTdEl = document.createElement('td');
-            const dateTdEl = document.createElement('td');
-            const titleTdEl = document.createElement('td');
-            const questionTdEl = document.createElement('td');
-
-            usernameTdEl.textContent = post.username;
-            dateTdEl.textContent = post.date;
-            titleTdEl.textContent = post.title;
-            questionTdEl.textContent = post.question;
-
-
-            const rowEl = document.createElement('tr');
-            rowEl.appendChild(usernameTdEl);
-            rowEl.appendChild(dateTdEl);
-            rowEl.appendChild(titleTdEl);
-            rowEl.appendChild(questionTdEl);
-
-            tableBodyEl.appendChild(rowEl);
-        }
-    } else {
-        tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to</td></tr>';
+    const questionsContainer = document.getElementById('myQuestionContainer');
+    for (const [i, question] of questions.entries()) {
+        const newCard = document.createElement('div');
+        const innerHTML =
+            `<div class="card mb-4">
+            <div class="card-body">
+                <div class="d-flex flex-row user-info">
+                    <div class="d-flex flex-column justify-content-start">
+                        <span class="d-block font-weight-bold names">@ ` + question.username + `</span>
+                        <span class="date text-black-50">` + question.date + `</span>
+                    </div>
+                </div>
+            <div class="mt-2">
+                <h5>` + question.title + `</h5>
+                <p>` + question.question + `</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="like p-2 cursor"><i class="bi bi-reply"></i>
+                    <span class="ml-1">Chat</span></div>
+                </div>
+            </div>
+            </div>
+        </div>`
+        newCard.innerHTML = innerHTML;
+        questionsContainer.appendChild(newCard);
     }
 }
 
