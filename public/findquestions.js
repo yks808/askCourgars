@@ -16,29 +16,29 @@ function displayQuestions(questions) {
     const tableBodyEl = document.querySelector('#questionsTable');
 
     if (questions.length) {
-
-        for (const [oneQ] of questions.entries()) {
-            const nameTdEl = document.createElement('td');
+        // Update the DOM with the scores
+        for (const [i, post] of questions.entries()) {
+            const usernameTdEl = document.createElement('td');
             const dateTdEl = document.createElement('td');
             const titleTdEl = document.createElement('td');
-            const scoreTdEl = document.createElement('td');
+            const questionTdEl = document.createElement('td');
 
+            usernameTdEl.textContent = post.username;
+            dateTdEl.textContent = post.date;
+            titleTdEl.textContent = post.title;
+            questionTdEl.textContent = post.question;
 
-            nameTdEl.textContent = oneQ.username;
-            dateTdEl.textContent = oneQ.date;
-            titleTdEl.textContent = oneQ.title;
-            scoreTdEl.textContent = oneQ.question;
 
             const rowEl = document.createElement('tr');
-            rowEl.appendChild(nameTdEl);
+            rowEl.appendChild(usernameTdEl);
             rowEl.appendChild(dateTdEl);
             rowEl.appendChild(titleTdEl);
-            rowEl.appendChild(scoreTdEl);
+            rowEl.appendChild(questionTdEl);
 
             tableBodyEl.appendChild(rowEl);
         }
     } else {
-        tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to score</td></tr>';
+        tableBodyEl.innerHTML = '<tr><td colSpan=4>Be the first to</td></tr>';
     }
 }
 
