@@ -50,7 +50,7 @@ async function addQuestion(username, title, question, date) {
 async function getQuestion() {
     const cursor = questionCollection.find();
     const info = await cursor.toArray();
-    console.log("db return", info);
+    //console.log("db return", info);
     return info;
 }
 

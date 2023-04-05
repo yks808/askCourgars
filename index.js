@@ -42,7 +42,7 @@ apiRouter.post('/question/create', async (req, res) => {
 
 apiRouter.get('/post', async (req, res) => {
     const questions = await DB.getQuestion();
-    console.log("post body", questions);
+    //console.log("post body", questions);
 
     res.send(questions);
 });

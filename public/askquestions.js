@@ -1,6 +1,6 @@
 async function post() {
 
-    console.log("post method called");
+    //console.log("post method called");
     const titleEl = document.querySelector("#title");
     localStorage.setItem("questionTitle", titleEl.value);
 
@@ -22,7 +22,7 @@ async function post() {
     // return questions;
 
     const body = ({ userName: userName, title: title, userQuestion: userQuestion, date: date });
-    console.log(body);
+    //onsole.log(body);
     const response = await fetch('api/question/create', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },

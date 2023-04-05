@@ -1,12 +1,12 @@
 async function loadQuestions() {
-    console.log("loadquestion is called");
+    //console.log("loadquestion is called");
 
     let questions = [];
     const response = await fetch('api/post');
-    console.log("coming back as", response);
+    //console.log("coming back as", response);
     questions = await response.json();
 
-    console.log("final", questions);
+    //console.log("final", questions);
 
     displayQuestions(questions);
 }
