@@ -44,6 +44,11 @@ function displayQuestions(questions) {
 
 loadQuestions();
 
+
+function test() {
+    window.location.href = "chat.html";
+
+}
 //class Ask {
 
     //constructor() {
