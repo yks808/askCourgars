@@ -3,6 +3,7 @@
 
 <head>
     <meta cha="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>Home | Ask Cougars</title>
 
@@ -39,10 +40,10 @@
                             <a class="nav-link" href="findquestions.html">Find Questions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="chat.html">Cougar Chat</a>
+                            <a class="nav-link text-primary" href="chat.html">Cougar Chat</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-primary" href="about.html">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                 </div>
 
@@ -61,13 +62,20 @@
         </nav>
     </header>
 
-    <main class="container-fluid text-center">
-        <section class="vh-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <h3> Ask Cougars is made so that byu students can easily ask questions anytime anwhere!</h3>
-            </div>
-        </section>
-        <div id="quote" class="quote-box text-dark"></div>
+    <main>
+        <div class="name">
+            <fieldset id="name-controls">
+                <legend>My Name</legend>
+                <input id="my-name" type="text" />
+            </fieldset>
+        </div>
+
+        <fieldset id="chat-controls" disabled>
+            <legend>Chat</legend>
+            <input id="new-msg" type="text" />
+            <button onclick="sendMessage()">Send</button>
+        </fieldset>
+        <div id="chat-text"></div>
     </main>
 
     <footer class="bg-dark text-white">
@@ -76,10 +84,9 @@
             <a class="text-reset" href="https://github.com/oYUKINAo/startup">GitHub</a>
         </div>
     </footer>
-    <script src="login.js"></script>
-    <script src="about.js"></script>
-    <script src="askquestions.js"></script>
 </body>
+<script src="chat.js"></script>
+<script src="askquestions.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
