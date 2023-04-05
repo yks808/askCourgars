@@ -1,4 +1,3 @@
-
 async function loadQuestions() {
     console.log("loadquestion is called");
 
@@ -13,6 +12,7 @@ async function loadQuestions() {
 }
 
 function displayQuestions(questions) {
+
     const questionsContainer = document.getElementById('myQuestionContainer');
     for (const [i, question] of questions.entries()) {
         const newCard = document.createElement('div');
@@ -32,7 +32,7 @@ function displayQuestions(questions) {
             <div class="d-flex justify-content-between">
                 <div class="d-flex flex-row align-items-center">
                     <div class="like p-2 cursor"><i class="bi bi-reply"></i>
-                    <span class="ml-1">Chat</span></div>
+                    <span class="ml-1" onclick="test()">Chat</span></div>
                 </div>
             </div>
             </div>
@@ -44,52 +44,51 @@ function displayQuestions(questions) {
 
 loadQuestions();
 
-class Ask {
+//class Ask {
 
-    constructor() {
+    //constructor() {
 
-        const postTitleEl = document.querySelector('.post-title');
-        postTitleEl.textContent = this.getQuestionTitle();
+        // const postTitleEl = document.querySelector('.post-title');
+        // postTitleEl.textContent = this.getQuestionTitle();
 
-        const postMainEl = document.querySelector('.post-main');
-        postMainEl.textContent = this.getQuestionMain();
+        // const postMainEl = document.querySelector('.post-main');
+        // postMainEl.textContent = this.getQuestionMain();
 
-        const postNameEl = document.querySelector('.post-name');
-        postNameEl.textContent = this.getPostName();
+        // const postNameEl = document.querySelector('.post-name');
+        // postNameEl.textContent = this.getPostName();
 
-        const dateEl = document.querySelector('.post-date');
-        dateEl.textContent = this.getDate();
+        // const dateEl = document.querySelector('.post-date');
+        // dateEl.textContent = this.getDate();
 
-        let infoToIn = [];
-        infoToIn = { name: postNameEl, date: dateEl, title: postTitleEl, main: postMainEl };
-        localStorage.setItem('userInfo', JSON.stringify(info));
-        //add all the input from a user as an array in localstorage
+        // let infoToIn = [];
+        // infoToIn = { name: postNameEl, date: dateEl, title: postTitleEl, main: postMainEl };
+        // localStorage.setItem('userInfo', JSON.stringify(info));
+        // //add all the input from a user as an array in localstorage
 
-        let infoToOut = [];
-        const infoToOutText = localStorage.getItem('userInfo');
-        if (infoToOutText) {
-            infoToOut = JSON.parse(infoToOutText);
-        }
-        //need to work on it later of the project to maek it work
+        // let infoToOut = [];
+        // const infoToOutText = localStorage.getItem('userInfo');
+        // if (infoToOutText) {
+        //     infoToOut = JSON.parse(infoToOutText);
+        // }
 
-    }
+    //}
 
-    getQuestionTitle() {
-        return localStorage.getItem('questionTitle') ?? 'No post(title) has made yet';
-    }
+    // getQuestionTitle() {
+    //     return localStorage.getItem('questionTitle') ?? 'No post(title) has made yet';
+    // }
 
-    getQuestionMain() {
-        return localStorage.getItem('questionMain') ?? 'No post(main) has made yet';
-    }
+    // getQuestionMain() {
+    //     return localStorage.getItem('questionMain') ?? 'No post(main) has made yet';
+    // }
 
-    getPostName() {
-        return localStorage.getItem('userName') ?? 'No post(name) has made yet';
-    }
+    //] getPostName() {
+    //     return localStorage.getItem('userName') ?? 'No post(name) has made yet';
+    // }
 
-    getDate() {
-        return new Date().toLocaleDateString();
-    }
+    // getDate() {
+    //     return new Date().toLocaleDateString();
+    // }
 
-}
+//}
 
-const ask = new Ask();
+//const ask = new Ask();

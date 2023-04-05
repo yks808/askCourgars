@@ -8,6 +8,14 @@ const authCookieName = 'token';
 
 // The service port may be set on the command line
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+});
+
+//const port = process.argv.length > 2 ? process.argv[2] : 4000;
+// server = app.listen(port, () => {
+//     console.log(`Listening on ${port}`);
+// });
 
 // JSON body parsing using built-in middleware
 app.use(express.json());
@@ -118,6 +126,3 @@ function setAuthCookie(res, authToken) {
     });
 }
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-});
