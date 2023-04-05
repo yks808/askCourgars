@@ -37,7 +37,7 @@ function sendMessage() {
 function appendMsg(cls, from, msg) {
     const chatText = document.querySelector('#chat-text');
     chatText.innerHTML =
-        `<div><span class="${cls}">${from}</span>: ${msg}</div>` +
+        `<div><span class="${cls}">@${from}</span>: ${msg}</div>` +
         chatText.innerHTML;
 }
 
