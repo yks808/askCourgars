@@ -160,7 +160,7 @@ const name = new Name();
      4)bcrypt is used so that we don’t have to store password, but instead cryptographically hash the password for securing purpose.
      5)401 is unauthorized code
      
-**Things I learned from SImon-websocket**
+**Things I learned from Simon-websocket**
      1)npm init -y
      2)npm install ws
      3)This project allows to see user who are playing Simon at the time and what scores they get in real time
@@ -169,6 +169,38 @@ const name = new Name();
      5)And to create own ws object
 	const wss = new WebSocketServer({ noServer: true });
      6)ping and pong are something to keep connection alive
+     
+**Things I learned from startup service assignmen**
+     1)When it is service based projects, need to use deployService.sh instead of deploYFiles.sh I was using for previous projects. You can review what is in that file by reviewing simon projetcs. 
+     2)When you debug, you can use comsole.log to see which functions you are in. It dispkayes in terminals or console in google in inspect
+     3)When you wan to dispay css that was already written with data you got from database, you can do something like this below to pass all the css in js. Backtick wiil get rid of any errors.
+     
+     const questionsContainer = document.getElementById('myQuestionContainer');
+     for (const [i, question] of questions.entries()) {
+        const newCard = document.createElement('div');
+        const innerHTML =
+            `<div class="card mb-4">
+            <div class="card-body">
+                <div class="d-flex flex-row user-info">
+                    <div class="d-flex flex-column justify-content-start">
+                        <span class="d-block font-weight-bold names">@ ` + question.username + `</span>
+                        <span class="date text-black-50">` + question.date + `</span>
+                    </div>
+                </div>
+            <div class="mt-2">
+                <h5>` + question.title + `</h5>
+                <p>` + question.question + `</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                    <div class="like p-2 cursor"><i class="bi bi-reply"></i>
+                    <span class="ml-1" onclick="test()">Chat</span></div>
+                </div>
+            </div>
+            </div>
+        </div>`
+        newCard.innerHTML = innerHTML;
+        questionsContainer.appendChild(newCard);
 
 # Ask Cougars
 
