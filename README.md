@@ -201,7 +201,14 @@ const name = new Name();
         </div>`
         newCard.innerHTML = innerHTML;
         questionsContainer.appendChild(newCard);
-
+	
+**Things I learned from simon react assignmen**
+     1) type npx create-react-app template-react interminal so that you can create template of react
+     2) you can uninstall some stuff to make it simple ex)web-vitals, sometesting-libraries under dependencies
+     3) organize stuff in simon-websocket and move needed folders and file from react template
+     4) .jsx will give the react icon so that it is easy to tell that is for react
+     5)class is for java so you need to use className instead
+     
 # Ask Cougars
 
 ## Design
