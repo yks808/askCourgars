@@ -38,7 +38,13 @@ function displayQuestions(questions) {
             </div>
         </div>`
         newCard.innerHTML = innerHTML;
-        questionsContainer.appendChild(newCard);
+
+        //this allow to display new questions to top instead of bottom
+        questionsContainer.parentNode.insertBefore(newCard, questionsContainer.nextSibling);
+
+        //this allows to display old input to the top and new input to the bottom
+        // questionsContainer.appendChild(newCard); 
+
     }
 }
 

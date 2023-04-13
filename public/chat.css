@@ -23,3 +23,7 @@ div .system {
 .name {
     padding: 1em 0;
 }
+
+footer a {
+    float: right;
+}
