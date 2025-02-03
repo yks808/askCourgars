@@ -1,5 +1,3 @@
-CS260 Web Programming
-
 # askCourgars
 
 askCourgars is a web application developed for the CS260 Web Programming class. It allows university students to create accounts, log in, post questions, and engage in chats with other students.
