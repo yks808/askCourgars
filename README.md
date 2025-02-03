@@ -14,8 +14,6 @@ askCourgars is a web application developed for the CS260 Web Programming class. 
 - **Frontend**: HTML, CSS, JavaScript, React
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
-- **Hosting**: (Add hosting details here, e.g., AWS, Heroku, etc.)
 
 ## Notes from the Class
 
