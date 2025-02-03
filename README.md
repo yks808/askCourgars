@@ -1,4 +1,23 @@
-# startup
+# askCourgars
+
+askCourgars is a web application developed for the CS260 Web Programming class. It allows university students to create accounts, log in, post questions, and engage in chats with other students.
+
+## Features
+
+- **Create an Account**: Users can sign up with an email and password.
+- **Login**: Secure login to access personalized features.
+- **Post Questions**: Users can post questions to other students in the university.
+- **Chat**: Engage in real-time conversations with fellow students.
+
+## Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript, React
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Hosting**: (Add hosting details here, e.g., AWS, Heroku, etc.)
+
+## Notes from the Class
 
 **How to secure a webpage** 
 
